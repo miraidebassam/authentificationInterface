@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="285.0" prefWidth="585.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+	<center>
+		<AnchorPane prefHeight="298.0" prefWidth="593.0" BorderPane.alignment="CENTER">
+			<children>
+				<VBox layoutX="137.0" layoutY="-2.0" prefHeight="285.0" prefWidth="456.0">
+					<children>
+						<AnchorPane prefHeight="315.0" prefWidth="437.0" style="-fx-background-color: #ECF0F1;">
+							<children>
+								<Label layoutX="165.0" layoutY="114.0" prefHeight="0.0" prefWidth="69.0" text="Username: " />
+								<TextField fx:id="txtLogin" accessibleRole="TABLE_CELL" layoutX="238.0" layoutY="101.0" prefHeight="26.0" prefWidth="183.0" style="-fx-font-family: Apple Chancery, cursive; -fx-border-color: #BA4A00;" />
+								<Label layoutX="169.0" layoutY="163.0" prefHeight="1.0" prefWidth="75.0" text="Password: " />
+								<Text layoutX="222.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: #6E2C00;" text="Login" textAlignment="CENTER" wrappingWidth="127.98307228088379">
+									<font>
+										<Font name="Viner Hand ITC" size="24.0" />
+									</font>
+									<fill>
+										<RadialGradient centerX="0.28438663128140246" centerY="0.5" radius="0.5">
+											<stops>
+												<Stop>
+													<color>
+														<Color />
+													</color>
+												</Stop>
+												<Stop offset="0.9209183673469388">
+													<color>
+														<Color red="0.75" green="0.1274999976158142" blue="0.37440505623817444" />
+													</color>
+												</Stop>
+												<Stop offset="1.0">
+													<color>
+														<Color red="1.0" green="1.0" blue="1.0" />
+													</color>
+												</Stop>
+											</stops>
+										</RadialGradient>
+									</fill>
+								</Text>
+								<AnchorPane layoutX="76.0" prefHeight="281.0" prefWidth="133.0">
+									<children>
+										<ImageView fitHeight="150.0" fitWidth="200.0" layoutX="-67.0" pickOnBounds="true" preserveRatio="true" />
+										<ImageView fitHeight="35.0" fitWidth="38.0" layoutX="48.0" layoutY="106.0">
+											<image>
+												<Image url="@../../../../../../Pictures/Saved%20Pictures/75625613-user-icon-human-person-symbol-avatar-login-sign-calendar-download-arrow-and-new-tag-signs-colored-fl.jpg" />
+											</image>
+										</ImageView>
+										<ImageView fitHeight="150.0" fitWidth="200.0" layoutX="-67.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true" />
+										<ImageView fitHeight="35.0" fitWidth="37.0" layoutX="48.0" layoutY="156.0">
+											<image>
+												<Image url="@../../../../../../Pictures/Saved%20Pictures/téléchargement.png" />
+											</image>
+										</ImageView>
+										<Button fx:id="txtConnecte" defaultButton="true" layoutX="67.0" layoutY="241.0" mnemonicParsing="false" onAction="#handleActionConnecter" prefHeight="32.0" prefWidth="77.0" style="-fx-background-color: green; -fx-background-radius: 25% 10%;" text="Connecter">
+											<effect>
+												<Lighting>
+													<bumpInput>
+														<Shadow />
+													</bumpInput>
+													<light>
+														<Light.Distant />
+													</light>
+												</Lighting>
+											</effect>
+										</Button>
+									</children>
+								</AnchorPane>
+								<Text fill="#ff1e1e" layoutX="297.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mot de passe oublie?" wrappingWidth="137.3164768218994" />
+								<PasswordField fx:id="txtPassword" layoutX="235.0" layoutY="150.0" prefHeight="26.0" prefWidth="185.0" />
+								<Button fx:id="txtClear" layoutX="249.0" layoutY="239.0" mnemonicParsing="false" onAction="#handleActionClear" prefHeight="32.0" prefWidth="73.0" style="-fx-background-color: #F0D083; -fx-background-radius: 25% 10%;" text="Clear" textAlignment="CENTER" />
+							</children>
+						</AnchorPane>
+					</children>
+				</VBox>
+				<AnchorPane layoutX="2.0" layoutY="1.0" prefHeight="217.0" prefWidth="145.0">
+					<children>
+						<ImageView fitHeight="219.0" fitWidth="147.0" layoutX="-2.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" />
+						<ImageView fitHeight="284.0" fitWidth="245.0" layoutX="-1.0" layoutY="-1.0">
+							<image>
+								<Image url="@../../../../../../Pictures/Saved%20Pictures/WhatsApp%20Image%202021-02-02%20at%2019.38.35.jpeg" />
+							</image>
+						</ImageView>
+					</children>
+				</AnchorPane>
+				<Button fx:id="txtQuitter" layoutX="488.0" layoutY="237.0" mnemonicParsing="false" onAction="#handleActionQuitter" prefHeight="32.0" prefWidth="73.0" style="-fx-background-color: #E74C3C; -fx-background-radius: 25% 10%;;" text="Quitter" />
+			</children>
+		</AnchorPane>
+	</center>
+</BorderPane>
